@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --heigth: 50px;
+}
+
+header{
+    text-align: center;
+    margin-top: 10px;
+}
+
+header h1{
+    font-size: 35px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    left: 20px;
+}
+
+.um{
+    width: 358px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #add8e6;
+    cursor: pointer;
+}
+
+.meio{
+    width: 178px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #120a8f;
+    cursor: pointer;
+}
+
+.terco{
+    width: 118px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #888888;
+    cursor: pointer;
+}
+
+.quarto{
+    width: 88px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color:green;
+    cursor: pointer;
+}
+
+.quinto{
+    width: 70px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: palevioletred;
+    cursor: pointer;
+}
+
+.sexto{
+    width: 58px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.oitavo{
+    width: 43px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: red;
+    cursor: pointer;
+}
+
+.nono{
+    width: 38px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: purple;
+    cursor: pointer;
+}
+
+.decimo{
+    width: 34px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game a{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.workspace{
+    width: 750px;
+    height: 500px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 50px;
+}

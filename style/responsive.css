@@ -1,0 +1,11 @@
+@media(max-width: 1200px){
+    main{
+        flex-direction: column;
+    }
+    
+    .workspace{
+        width: 550px;
+        margin: 5px;
+    }
+
+}
