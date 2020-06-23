@@ -93,15 +93,28 @@ function draggable(){
         workspace.addEventListener('mousemove', mousemove);
         workspace.addEventListener('mouseup', mouseup);
         const whichArt = event.target;
-
         let prevX = e.clientX - whichArt.offsetLeft
         let prevY = e.clientY - whichArt.offsetTop
 
         function mousemove(e){
+            let positionX = e.clientX - prevX;
+            let positionY = e.clientY - prevY;
 
-            el.style.left = (e.clientX - prevX) +'px';
-            el.style.top = (e.clientY - prevY) +'px';
+            if (positionX <= workspace.offsetLeft){
+                el.style.left = workspace.offsetLeft;
+            } else if (positionX >= workspace.offsetLeft + workspace.offsetWidth - el.offsetWidth){
+                el.style.left = workspace.offsetLeft + workspace.offsetWidth - el.offsetWidth ;
+            } else {
+                el.style.left = positionX +'px';
+            }
 
+            if (positionY <= workspace.offsetTop){
+                el.style.top = workspace.offsetTop;
+            } else if (positionY >= workspace.offsetTop + workspace.offsetHeight - el.offsetHeight){
+                el.style.top = workspace.offsetTop + workspace.offsetHeight - el.offsetHeight ;
+            } else{
+                el.style.top = positionY +'px';
+            }
         }
 
         function mouseup(){
@@ -118,17 +131,30 @@ function del(){
 
 function touchStart(){
     event.preventDefault();
-    const whichArt = event.target;
+    const el = event.target;
     
-    let moveOffsetX = whichArt.offsetLeft - event.touches[0].pageX;
-    let moveOffsetY = whichArt.offsetTop - event.touches[0].pageY;
+    let moveOffsetX = el.offsetLeft - event.touches[0].pageX;
+    let moveOffsetY = el.offsetTop - event.touches[0].pageY;
 
-    whichArt.addEventListener('touchmove', ()=>{
+    el.addEventListener('touchmove', ()=>{
         let positionX = event.touches[0].pageX + moveOffsetX;
         let positionY = event.touches[0].pageY + moveOffsetY;
 
-        whichArt.style.left = positionX + 'px';
-        whichArt.style.top = positionY + 'px';
-    })
-}
+        if (positionX <= workspace.offsetLeft){
+            el.style.left = workspace.offsetLeft;
+        } else if (positionX >= workspace.offsetLeft + workspace.offsetWidth - el.offsetWidth){
+            el.style.left = workspace.offsetLeft + workspace.offsetWidth - el.offsetWidth ;
+        } else {
+            el.style.left = positionX +'px';
+        }
 
+        if (positionY <= workspace.offsetTop){
+            el.style.top = workspace.offsetTop;
+        } else if (positionY >= workspace.offsetTop + workspace.offsetHeight - el.offsetHeight){
+            el.style.top = workspace.offsetTop + workspace.offsetHeight - el.offsetHeight ;
+        } else{
+            el.style.top = positionY +'px';
+        }
+    }
+    )
+}
