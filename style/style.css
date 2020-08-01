@@ -90,6 +90,16 @@ main{
     cursor: pointer;
 }
 
+.setimo{
+    width: 49px;
+    height: var(--heigth);
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
 .oitavo{
     width: 43px;
     height: var(--heigth);
@@ -116,7 +126,7 @@ main{
     margin: 10px;
     border-width: 1px;
     border-style: solid;
-    background-color: brown;
+    background-color: orange;
     cursor: pointer;
 }
 

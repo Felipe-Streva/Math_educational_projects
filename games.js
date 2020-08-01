@@ -20,6 +20,7 @@ const terco = document.querySelector('.container .terco');
 const quarto = document.querySelector('.container .quarto');
 const quinto = document.querySelector('.container .quinto');
 const sexto = document.querySelector('.container .sexto');
+const setimo = document.querySelector('.container .setimo');
 const oitavo = document.querySelector('.container .oitavo');
 const nono = document.querySelector('.container .nono');
 const decimo = document.querySelector('.container .decimo');
@@ -30,6 +31,7 @@ terco.addEventListener('click', criarTerco)
 quarto.addEventListener('click', criarQuarto)
 quinto.addEventListener('click', criarQuinto)
 sexto.addEventListener('click', criarSexto)
+setimo.addEventListener('click', criarSetimo)
 oitavo.addEventListener('click', criarOitavo)
 nono.addEventListener('click', criarNono)
 decimo.addEventListener('click', criarDecimo)
@@ -56,6 +58,10 @@ function criarQuinto(){
 
 function criarSexto(){
     newElement('sexto')
+}
+
+function criarSetimo(){
+    newElement('setimo')
 }
 
 function criarOitavo(){
